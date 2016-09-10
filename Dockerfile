@@ -6,7 +6,7 @@ RUN groupadd -r uwsgi && useradd -r -g uwsgi uwsgi
 RUN yum install -y curl
 RUN curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py" && \
     python get-pip.py
-RUN yum install -y ﻿python-devel && \
+RUN yum install -y python-devel && \
     yum install -y rh-python34-python-devel
 RUN pip install Flask==0.10.1 uWSGI==2.0.8 requests==2.5.1 redis==2.10.3
 WORKDIR /app
